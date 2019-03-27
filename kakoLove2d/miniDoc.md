@@ -8,7 +8,7 @@
 - release _(array with all actions just released)_
 - actionsMap _(key to actions pairs table map)_
 - actions _(status of all possible actions inputs)_
- - up
+  - up
  - right
  - down
  - left
