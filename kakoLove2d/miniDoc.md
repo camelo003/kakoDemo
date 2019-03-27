@@ -1,11 +1,42 @@
 # My Classes
 
+## Controller
+(Object that read player inputs)
+###### Fields
+- hit _(array with all actions just pressed)_
+- hold _(array with all actions that are being pressed)_
+- release _(array with all actions just released)_
+- actionsMap _(key to actions pairs table map)_
+- actions _(status of all possible actions inputs)_
+ - up
+ - right
+ - down
+ - left
+ - start
+ - select
+ - yButton
+ - xButton
+ - aButton
+ - bButton
+ - lButton
+ - rButton
+
+###### Methods
+solveInputs() _(routine to solve inputs based on actionsMap)_
+drawControler() _(draw a thumb of the controller status)_
+
+-----
 ## CharsModifier
 (Object that deal with characters)
 ###### Fields
 - charsToRender _(array with chars to deal, perm. + mul.)_
 
 ###### Methods
+- setStatus() _(sets a char status)_
+- clearStatus() _(clears a char status)_
+
+- jump() _(perform a jump at same level, lower or upper)_
+
 - setMovDirection() _(solve movement direction)_
 - makeMove() _(increment pos. by vel., based on moving direction )_
 
@@ -13,6 +44,7 @@
 
 - drawAtScene() _(draw a char to a scene)_
 - drawCharsAtScene() _(draw all chars to a scene)_
+
 -----
 ## charMutData
 (Characters mutant data)
@@ -22,10 +54,11 @@
 - pos _(position)_
  - x _(TO WORLD horizontal position)_
  - y _(TO WORLD vertical position)_
+- localTimer _(timer udes to control animations)_
 - baseVel _(base velocity)_
 - collisionActive _(is active?)_
 - collisionGroup _(collision group for this char)_
-- status _(stoped, walking, running, swimming)_
+- status _(stoped, walking, running or swimming)_
 - flags _(array to keep adicional characters status)_
 
 ###### Methods
